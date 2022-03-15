@@ -12,24 +12,36 @@ public class Artikal {
 		return sifra;
 	}
 	public void setSifra(int sifra) {
+		if(sifra < 0) {
+			throw new IllegalArgumentException("Sifra mora biti veca od 0!");
+		}
 		this.sifra = sifra;
 	}
 	public String getNaziv() {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv == null || naziv.isEmpty()) {
+			throw new IllegalArgumentException("Morate uneti naziv artikla!");
+		}
 		this.naziv = naziv;
 	}
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
+		if(naziv == null || naziv.isEmpty()) {
+			throw new IllegalArgumentException("Morate uneti opis artikla!");
+		}
 		this.opis = opis;
 	}
 	public int getKolicina() {
 		return kolicina;
 	}
 	public void setKolicina(int kolicina) {
+		if(kolicina < 0) {
+			throw new IllegalArgumentException("Kolicina mora biti veca od 0!");
+		}
 		this.kolicina = kolicina;
 	}
 	

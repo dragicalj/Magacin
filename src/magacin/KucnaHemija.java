@@ -11,6 +11,9 @@ public class KucnaHemija extends Artikal {
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
+		if(rokTrajanja == null) {
+			throw new IllegalArgumentException("Morate uneti rok trajanja!");
+		}
 		this.rokTrajanja = rokTrajanja;
 	}
 	
