@@ -11,7 +11,7 @@ public class Magacin implements MagacinInterfejs{
 	@Override
 	public void dodajUMagacin(Artikal artikal) {
 		if(artikal==null) {
-			throw new RuntimeException("Artikal ne sme biti null!");
+			throw new NullPointerException("Artikal ne sme biti null!");
 		}
 		for (Artikal artikalIzMagacina : artikli) {
 			if(artikalIzMagacina.equals(artikal)) {
@@ -26,7 +26,7 @@ public class Magacin implements MagacinInterfejs{
 	@Override
 	public void izbaciIzMagacina(Artikal artikal) {
 		if(artikal==null) {
-			throw new RuntimeException("Artikal ne sme biti null!");
+			throw new NullPointerException("Artikal ne sme biti null!");
 		}
 		for (Artikal artikalIzMagacina : artikli) {
 			if(artikalIzMagacina.equals(artikal)) {
