@@ -1,13 +1,16 @@
 package interfejs;
 
+import java.util.LinkedList;
+
 import magacin.Artikal;
 
 public class Magacin implements MagacinInterfejs{
+	
+	private LinkedList<Artikal> artikli=new LinkedList<>();
 
 	@Override
 	public void dodajUMagacin(Artikal artikal) {
-		// TODO Auto-generated method stub
-		
+		artikli.add(artikal);
 	}
 
 	@Override
